@@ -1,0 +1,22 @@
+{
+  "name": "PECTTA Class 8 English App V2 Pro",
+  "short_name": "PECTTA Eng V2",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "description": "PECTTA Grade 8 English Pro app with MCQs, mock tests, comprehension, editing, notes, bookmarks and offline support.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2436/2436874.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2436/2436874.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
