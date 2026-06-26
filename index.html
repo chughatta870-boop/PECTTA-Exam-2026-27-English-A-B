@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PECTTA English App V2 Pro - Class 8</title>
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h2>PECTTA V2</h2>
+        <p>Class 8 English Pro</p>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-btn active" data-screen="dashboardScreen">Dashboard</button>
+        <button class="menu-btn" data-screen="profileScreen">Student Profile</button>
+        <button class="menu-btn" data-screen="patternScreen">Paper Pattern</button>
+        <button class="menu-btn" data-screen="practiceScreen">MCQ Practice</button>
+        <button class="menu-btn" data-screen="mockScreen">Mock Test</button>
+        <button class="menu-btn" data-screen="comprehensionScreen">Comprehension</button>
+        <button class="menu-btn" data-screen="editingScreen">Editing / Proofreading</button>
+        <button class="menu-btn" data-screen="notesScreen">Notes Bank</button>
+        <button class="menu-btn" data-screen="bookmarksScreen">Bookmarks</button>
+        <button class="menu-btn" data-screen="progressScreen">Progress</button>
+        <button class="menu-btn" data-screen="settingsScreen">Settings</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>PECTTA / Punjab Grade 8</p>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="toggleSidebar" class="icon-btn">☰</button>
+          <div>
+            <h1>PECTTA English App Version 2 Pro</h1>
+            <p>Class 8th English Preparation</p>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <button id="themeToggle" class="icon-btn">🌙</button>
+        </div>
+      </header>
+
+      <!-- DASHBOARD -->
+      <section id="dashboardScreen" class="screen active">
+        <div class="card hero-card">
+          <h2>Welcome to PECTTA English V2 Pro</h2>
+          <p>
+            Prepare English for Grade 8 with MCQs, comprehension, editing,
+            grammar, letters, essays, mock tests, progress tracking and offline access.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="card stat-card">
+            <span>Total Tests</span>
+            <h3 id="dashTests">0</h3>
+          </div>
+          <div class="card stat-card">
+            <span>Average Score</span>
+            <h3 id="dashAverage">0%</h3>
+          </div>
+          <div class="card stat-card">
+            <span>Best Score</span>
+            <h3 id="dashBest">0%</h3>
+          </div>
+          <div class="card stat-card">
+            <span>Bookmarks</span>
+            <h3 id="dashBookmarks">0</h3>
+          </div>
+        </div>
+
+        <div class="quick-grid">
+          <div class="card quick-card">
+            <h3>MCQ Practice</h3>
+            <p>Category wise MCQs for grammar, vocabulary, tenses and sentence structure.</p>
+            <button class="btn primary go-screen" data-screen="practiceScreen">Open Practice</button>
+          </div>
+
+          <div class="card quick-card">
+            <h3>Mock Test</h3>
+            <p>Timed English paper style test with mixed MCQs.</p>
+            <button class="btn success go-screen" data-screen="mockScreen">Start Mock</button>
+          </div>
+
+          <div class="card quick-card">
+            <h3>Notes & Writing</h3>
+            <p>Letters, applications, essays, grammar notes and vocabulary bank.</p>
+            <button class="btn primary go-screen" data-screen="notesScreen">Open Notes</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROFILE -->
+      <section id="profileScreen" class="screen">
+        <div class="card">
+          <h2>Student Profile</h2>
+          <div class="form-grid">
+            <div>
+              <label>Student Name</label>
+              <input type="text" id="studentName" placeholder="Enter student name" />
+            </div>
+            <div>
+              <label>Roll Number</label>
+              <input type="text" id="studentRoll" placeholder="Enter roll number" />
+            </div>
+            <div>
+              <label>School Name</label>
+              <input type="text" id="studentSchool" placeholder="Enter school name" />
+            </div>
+            <div>
+              <label>Class</label>
+              <input type="text" id="studentClass" value="8th" />
+            </div>
+          </div>
+          <div class="form-actions">
+            <button id="saveProfileBtn" class="btn primary">Save Profile</button>
+          </div>
+          <div id="profilePreview" class="profile-preview"></div>
+        </div>
+      </section>
+
+      <!-- PAPER PATTERN -->
+      <section id="patternScreen" class="screen">
+        <div class="card">
+          <h2>PECTTA Grade 8 English Paper Pattern</h2>
+          <div class="pattern-grid">
+            <div class="pattern-box">
+              <h3>Part A - MCQs</h3>
+              <p>40 marks</p>
+              <ul>
+                <li>Grammar</li>
+                <li>Vocabulary</li>
+                <li>Tenses</li>
+                <li>Text-based concepts</li>
+              </ul>
+            </div>
+            <div class="pattern-box">
+              <h3>Part B - Short Questions</h3>
+              <p>30 marks</p>
+              <ul>
+                <li>Comprehension</li>
+                <li>Editing / Proofreading</li>
+              </ul>
+            </div>
+            <div class="pattern-box">
+              <h3>Part C - Writing</h3>
+              <p>30 marks</p>
+              <ul>
+                <li>Dialogue / Summary</li>
+                <li>Letter Writing</li>
+                <li>Paragraph / Essay</li>
+              </ul>
+            </div>
+          </div>
+          <p class="muted top-space">
+            Use this app to practice the same skills: MCQs, comprehension, editing,
+            grammar, paragraph writing, essays, letters and applications.
+          </p>
+        </div>
+      </section>
+
+      <!-- PRACTICE -->
+      <section id="practiceScreen" class="screen">
+        <div class="card">
+          <h2>MCQ Practice Mode</h2>
+          <div class="form-grid">
+            <div>
+              <label>Category</label>
+              <select id="practiceCategory">
+                <option value="all">All MCQs</option>
+                <option value="grammar">Grammar</option>
+                <option value="vocabulary">Vocabulary</option>
+                <option value="tenses">Tenses</option>
+                <option value="articles">Articles / Prepositions</option>
+                <option value="sentence">Sentence Structure</option>
+              </select>
+            </div>
+            <div>
+              <label>Questions</label>
+              <select id="practiceCount">
+                <option value="10">10</option>
+                <option value="15" selected>15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+              </select>
+            </div>
+            <div>
+              <label>Time</label>
+              <select id="practiceTime">
+                <option value="300">5 Minutes</option>
+                <option value="600" selected>10 Minutes</option>
+                <option value="900">15 Minutes</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button id="startPracticeBtn" class="btn primary">Start Practice</button>
+            <button id="wrongPracticeBtn" class="btn secondary">Practice Wrong Questions</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MOCK -->
+      <section id="mockScreen" class="screen">
+        <div class="card">
+          <h2>Full Mock Test</h2>
+          <p class="muted">Board-style mixed English MCQ mock test.</p>
+          <div class="form-grid">
+            <div>
+              <label>Mock Questions</label>
+              <select id="mockCount">
+                <option value="20">20</option>
+                <option value="30" selected>30</option>
+                <option value="40">40</option>
+              </select>
+            </div>
+            <div>
+              <label>Time</label>
+              <select id="mockTime">
+                <option value="900">15 Minutes</option>
+                <option value="1200" selected>20 Minutes</option>
+                <option value="1800">30 Minutes</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button id="startMockBtn" class="btn success">Start Mock Test</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUIZ -->
+      <section id="quizScreen" class="screen">
+        <div class="card quiz-card">
+          <div class="quiz-top">
+            <div>
+              <h2 id="quizModeTitle">English Test</h2>
+              <p id="quizCounter">Question 1 / 10</p>
+            </div>
+            <div class="timer-box">
+              <span>Time Left</span>
+              <strong id="quizTimer">10:00</strong>
+            </div>
+          </div>
+
+          <div class="progress-wrap">
+            <div id="quizProgress" class="progress-bar"></div>
+          </div>
+
+          <div class="question-area">
+            <h3 id="quizQuestion">Question text here</h3>
+            <div id="quizOptions" class="options"></div>
+          </div>
+
+          <div class="quiz-actions">
+            <button id="prevQuestionBtn" class="btn secondary">Previous</button>
+            <button id="nextQuestionBtn" class="btn primary">Next</button>
+            <button id="submitQuizBtn" class="btn success hidden">Submit</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULT -->
+      <section id="resultScreen" class="screen">
+        <div class="card">
+          <h2>Quiz Result</h2>
+          <div class="result-grid">
+            <div class="result-box">
+              <span>Total</span>
+              <strong id="resultTotal">0</strong>
+            </div>
+            <div class="result-box">
+              <span>Correct</span>
+              <strong id="resultCorrect">0</strong>
+            </div>
+            <div class="result-box">
+              <span>Wrong</span>
+              <strong id="resultWrong">0</strong>
+            </div>
+            <div class="result-box">
+              <span>Percentage</span>
+              <strong id="resultPercent">0%</strong>
+            </div>
+          </div>
+
+          <div id="resultMessage" class="result-message"></div>
+
+          <div class="result-actions">
+            <button id="reviewAnswersBtn" class="btn secondary">Review Answers</button>
+            <button id="backDashboardBtn" class="btn primary">Back to Dashboard</button>
+          </div>
+        </div>
+
+        <div id="reviewPanel" class="card hidden">
+          <h3>Answer Review</h3>
+          <div id="reviewList"></div>
+        </div>
+      </section>
+
+      <!-- COMPREHENSION -->
+      <section id="comprehensionScreen" class="screen">
+        <div class="card">
+          <h2>Comprehension Practice</h2>
+          <div id="comprehensionList" class="notes-list"></div>
+        </div>
+      </section>
+
+      <!-- EDITING -->
+      <section id="editingScreen" class="screen">
+        <div class="card">
+          <h2>Editing / Proofreading Practice</h2>
+          <div id="editingList" class="notes-list"></div>
+        </div>
+      </section>
+
+      <!-- NOTES -->
+      <section id="notesScreen" class="screen">
+        <div class="card">
+          <h2>English Notes Bank</h2>
+
+          <div class="notes-toolbar">
+            <input type="text" id="notesSearch" placeholder="Search notes..." />
+            <select id="notesCategory">
+              <option value="all">All Notes</option>
+              <option value="letter">Letters</option>
+              <option value="application">Applications</option>
+              <option value="essay">Essays</option>
+              <option value="paragraph">Paragraphs</option>
+              <option value="grammar">Grammar</option>
+              <option value="vocabulary">Vocabulary</option>
+            </select>
+          </div>
+
+          <div id="notesList" class="notes-list"></div>
+        </div>
+      </section>
+
+      <!-- BOOKMARKS -->
+      <section id="bookmarksScreen" class="screen">
+        <div class="card">
+          <h2>Bookmarks / Favourites</h2>
+          <div id="bookmarkList" class="notes-list"></div>
+        </div>
+      </section>
+
+      <!-- PROGRESS -->
+      <section id="progressScreen" class="screen">
+        <div class="card">
+          <h2>Progress Report</h2>
+          <div id="progressSummary" class="progress-summary"></div>
+          <div id="historyList" class="history-list"></div>
+          <div class="form-actions">
+            <button id="clearProgressBtn" class="btn danger">Clear Progress</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="settingsScreen" class="screen">
+        <div class="card">
+          <h2>Settings</h2>
+          <div class="settings-list">
+            <div class="setting-item">
+              <div>
+                <h4>Dark / Light Theme</h4>
+                <p>Switch app theme.</p>
+              </div>
+              <button id="themeToggle2" class="btn secondary">Toggle Theme</button>
+            </div>
+
+            <div class="setting-item">
+              <div>
+                <h4>Reset App Data</h4>
+                <p>Remove saved profile, bookmarks and progress.</p>
+              </div>
+              <button id="resetAppBtn" class="btn danger">Reset App</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
